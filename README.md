@@ -22,23 +22,8 @@ Toilet Inspector is a practical and very simple app to manage toilets. You are a
 
 ---
 
-## How it's build!
-- in your terminal, check for node: `node -v`
-- in your terminal, check for npm: `npm v`<br/>
-don't have it?:
-- install [node and npm](https://nodejs.org/en/download/)
-- in your terminal, install<br/>
-[body-parser](https://www.npmjs.com/package/body-parser)<br/>
-[express.js](https://www.npmjs.com/package/express)<br/>
-[mongoose](https://www.npmjs.com/package/mongoose)<br/>
-as **global dependencies** (with install -g ...)<br/>
-- in your terminal, install<br/>
-[pug](https://www.npmjs.com/package/pug)<br/>
-[nodemon](https://www.npmjs.com/package/nodemon)<br/>
-as **devDependencies** (with install --save-dev ...)<br/>
-
 ## How to run it in your terminal
-Assumed that you cloned the repo:
+After cloning the repo:
 - navigate to the project
 - run `node index.js`
 - call `http://localhost:3000/` an try out the code
