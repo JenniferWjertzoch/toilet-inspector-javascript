@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+
+  h2.headline Thanks for visiting toilet #{ data.toilet.name } in #{ data.toilet.location }!
+
+  p #{ data.comment.title }
+  p #{ data.comment.description }
+  p Rating: #{ data.comment.rating }

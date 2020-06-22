@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+  h1 Hi, #{ data.visitor.name }!
+  h2 Choose an  establishment and share your experience with us.
+
+  h1 Create a new toilet
+  form(method='POST' action='/toilet')
+      input(type="hidden", name="visitorId", value=`${data.visitor._id}`)
+      .form-group
+          label(for='name') Name:
+          input#name.form-control(placeholder='name', name='name')
+      .form-group
+          label(for='location') Location:
+          input#location.form-control(placeholder='location', name='location')
+      button(class="submit" type='submit') Send
+
+
+  h3 Choose an existing toilet to add comment
+    ul
+      each toilet in data.toilets
+        li
+          a(href=`/toilet/${toilet._id}/visitor/${data.visitor._id}`) #{ toilet.name }
+
+  h3 Or vote on existing comment
+    a(href=`/comment/all-list/visitor/${ data.visitor._id }`) &nbsp; Show all comments
